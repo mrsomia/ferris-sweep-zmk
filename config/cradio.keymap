@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
@@ -14,8 +15,8 @@
     #define NUM 1
     #define SYM 2
     #define FNC 3
-    #define SYM2 4
-    #define ACCENT 5
+    #define NAV 4
+    #define MEDIA 5
     #define SETTINGS 6
 
 / {
@@ -29,7 +30,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-
+        // poistinal holds for shift cmd and alt
         lht: hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -41,6 +42,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // poistinal holds for shift cmd and alt
         rht: hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -69,20 +71,25 @@
 
     combos {
         compatible = "zmk,combos";
+
         combo_esc {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            bindings = <&kp ESC>;
+            bindings = <&lt 3 ESC>;
+        };
+        combo_delete {
+            bindings = <&lt 6 DEL>;
+            key-positions = <32 33>;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+  //  conditional_layers {
+  //      compatible = "zmk,conditional-layers";
+  //      tri_layer {
+  //          if-layers = <1 2>;
+  //          then-layer = <3>;
+  //      };
+  //  };
 
     keymap {
         compatible = "zmk,keymap";
@@ -94,9 +101,9 @@
         //                                   TAB        ENTER           SPACE       BSPC
 
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
-            &lht LGUI A &lht LALT S &ht LCTRL D &lht LSHFT F &kp G       &kp H      &rht RSHFT J  &ht RCTRL K  &rht RALT L  &rht RGUI SQT
+            &lht LGUI A &lht LALT S &ht LCTRL D &lht LSHFT F &kp G     &kp H      &rht RSHFT J  &ht RCTRL K  &rht RALT L  &rht RGUI SQT
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
-                                            &lt 4 TAB   &lt 3 ENTER     &lt 1 SPACE  &lt 2 BSPC
+                                            &lt 5 TAB   &lt 4 SPACE     &lt 1 BSPC  &lt 2 ENTER
 
             >;
         };
@@ -104,7 +111,7 @@
         num {
             bindings = <
             &kp LBKT    &kp N7     &kp N8     &kp N9     &kp RBKT         &trans   &trans  &trans  &trans    &tdreset
-            &kp SEMI    &kp N4     &kp N5     &kp N6     &kp EQUAL         &kp DOT   &kp RSHFT   &kp RCTRL   &kp RALT   &kp RGUI
+            &kp SEMI    &kp N4     &kp N5     &kp N6     &kp EQUAL        &kp DOT   &kp RSHFT   &kp RCTRL   &kp RALT   &kp RGUI
             &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp BSLH         &trans    &trans     &trans     &trans     &tdboot
                                               &kp MINUS     &kp N0        &trans     &trans
         //| [        |  7       |  8       |  9       |  ]       |   |          |          |          |          |SYS_RESET |
@@ -129,15 +136,56 @@
             >;
         };
 
-        tri_layer {
+        func {
             bindings = <
-        //| RESET    |          |          |          |PROFILE 0 |   |          |          |          |          |  RESET   |
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
-        //|BOOTLOADER|          |          |          |PROFILE 1 |   |          |          |          |          |BOOTLOADER|
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //|          |          |          | CLEAR BT |PROFILE 2 |   |          |          |          |          |          |
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-                                             &trans     &trans         &trans     &trans
+            &kp F12    &kp F7     &kp F8     &kp F9     &kp RBKT         &trans   &trans  &trans  &trans    &tdreset
+            &kp F11    &kp F4     &kp F5     &kp F6     &kp EQUAL        &trans   &kp RSHFT   &kp RCTRL   &kp RALT   &kp RGUI
+            &kp F10  &kp F1     &kp F2     &kp F3     &kp BSLH         &trans    &trans     &trans     &trans     &tdboot
+                                              &kp MINUS     &kp N0        &trans     &trans
+        //| [        |  7       |  8       |  9       |  ]       |   |          |          |          |          |SYS_RESET |
+        //| ;        |  4       |  5       |  6       |  =       |   | .        | RSHFT    | RCTRL    | RALT     |  RGUI    |
+        //| `        |  1       |  2       |  3       |  \       |   |          |          |          |          |BOOTLOADER|
+        //                                 |  -       |  0       |   |  HELD    | HELD     |
+            >;
+        };
+
+
+        nav {
+            bindings = <
+            &tdreset    &trans      &trans      &trans      &trans        &trans      &kp LG(Z)    &kp LS(LG(Z))    &trans    &trans 
+            &kp LGUI    &kp LALT     &kp LCTRL  &kp LSHFT  &trans         &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT   &kp ESC
+            &tdboot     &trans     &trans       &trans     &trans         &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &caps_word
+                                              &kp MINUS     &kp N0        &trans     &trans
+        //|SYS_RESET |          |          |          |          |   |          |          |          |          |SYS_RESET |
+        //| LGUI     | LALT     | LCTRL    | LSHFT    |          |   | LEFT     | DOWN     | UP       | RIGHT    |  ESC     |
+        //|BOOTLOADER|          |          |          |          |   |          |          |          |          |BOOTLOADER|
+        //                                 |          | HELD     |   |          |          |
+            >;
+        };
+
+        media {
+            bindings = <
+            &tdreset    &trans      &trans      &trans      &trans        &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
+            &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT  &trans         &out OUT_TOG    &kp C_PREV  &kp C_PP    &kp C_NEXT   &kp ESC
+            &tdboot     &trans     &trans       &trans     &trans         &kp C_BRI_UP  &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_DN &caps_word
+                                              &kp MINUS     &kp N0        &trans     &trans
+        //|SYS_RESET |          |          |          |          |   |          |          |          |          |SYS_RESET |
+        //| LGUI     | LALT     | LCTRL    | LSHFT    |          |   | LEFT     | DOWN     | UP       | RIGHT    |  ESC     |
+        //|BOOTLOADER|          |          |          |          |   |          |          |          |          |BOOTLOADER|
+        //                                 |          | HELD     |   |          |          |
+            >;
+        };
+
+        settings {
+            bindings = <
+            &tdreset    &trans      &trans      &trans      &trans        &trans      &trans    &trans    &trans    &trans 
+            &kp LGUI    &kp LALT    &kp LCTRL  &kp LSHFT  &trans         &none    &kp C_PREV  &kp C_PP    &kp C_NEXT   &kp ESC
+            &tdboot     &trans     &trans       &trans     &trans         &kp C_BRI_UP  &kp C_VOL_UP &kp C_VOL_DN &kp C_BRI_DN &caps_word
+                                              &kp MINUS     &kp N0        &trans     &trans
+        //|SYS_RESET |          |          |          |          |   |          |          |          |          |SYS_RESET |
+        //| LGUI     | LALT     | LCTRL    | LSHFT    |          |   | LEFT     | DOWN     | UP       | RIGHT    |  ESC     |
+        //|BOOTLOADER|          |          |          |          |   |          |          |          |          |BOOTLOADER|
+        //                                 |          | HELD     |   |          |          |
             >;
         };
     };
