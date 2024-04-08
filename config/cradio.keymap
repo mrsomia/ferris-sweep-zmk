@@ -63,14 +63,14 @@
 
         tdboot: tap_dance_boot {
             compatible = "zmk,behavior-tap-dance";
-            binding-cells = <0>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&bootloader>;
             };
 
         tdreset: tap_dance_reset {
             compatible = "zmk,behavior-tap-dance";
-            binding-cells = <0>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&sys_reset>;
             };
