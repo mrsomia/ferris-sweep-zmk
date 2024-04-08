@@ -159,13 +159,13 @@
 
         nav {
             bindings = <
-            &tdreset    &trans      &trans      &trans      &trans        &trans      &kp LG(Z)    &kp LS(LG(Z))    &trans    &trans 
+            &tdreset    &trans      &trans      &trans      &trans        &trans      &kp LG(Z)    &kp LS(LG(Z))    &trans    &caps
             &kp LGUI    &kp LALT     &kp LCTRL  &kp LSHFT  &trans         &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT   &kp ESC
             &tdboot     &trans     &trans       &trans     &trans         &kp HOME  &kp PG_DN     &kp PG_UP     &kp END     &caps
-                                              &kp MINUS     &kp N0        &trans     &trans
-        //|SYS_RESET |          |          |          |          |   |          | UNDO     | REDO     |          |SYS_RESET |
+                                              &kp MINUS     &kp N0        &trans     &kp ENTER
+        //|SYS_RESET |          |          |          |          |   |          | UNDO     | REDO     |          |caps      |
         //| LGUI     | LALT     | LCTRL    | LSHFT    |          |   | LEFT     | DOWN     | UP       | RIGHT    |  ESC     |
-        //|BOOTLOADER|          |          |          |          |   |          |          |          |          |BOOTLOADER|
+        //|BOOTLOADER|          |          |          |          |   | HOME     | PGDN     | PGUP     | END      |caps      |
         //                                 |          | HELD     |   |          |          |
             >;
         };
