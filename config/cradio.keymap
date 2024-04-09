@@ -130,7 +130,7 @@
             bindings = <
 &kp LBRC   &kp AMPS    &kp ASTRK  &kp LPAR   &kp RBRC    &trans   &trans     &trans     &trans    &tdreset
 &kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET  &kp PLUS    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp TILDE  &kp EXCL    &kp AT     &kp HASH   &kp BSLH    &trans   &trans     &trans     &trans    &tdboot
+&kp TILDE  &kp EXCL    &kp AT     &kp HASH   &kp PIPE    &trans   &trans     &trans     &trans    &tdboot
                                   &kp UNDER  &kp RPAR    &trans   &trans
             >;
         };
