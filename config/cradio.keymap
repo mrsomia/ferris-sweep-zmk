@@ -136,7 +136,7 @@
             bindings = <
 &kp LBKT   &kp N7  &kp N8  &kp N9     &kp RBKT     &trans   &trans     &trans     &trans    &tdreset
 &kp SEMI   &kp N4  &kp N5  &kp N6     &kp EQUAL    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp BSLH     &trans   &trans     &trans     &trans    &bootloader
+&kp GRAVE  &kp N1  &kp N2  &kp N3     &kp BSLH     &trans   &trans     &trans     &trans    &tdboot
                            &kp MINUS  &kp N0       &trans   &trans
             >;
         };
@@ -145,7 +145,7 @@
             bindings = <
 &kp LBRC   &kp AMPS    &kp ASTRK  &kp LPAR   &kp RBRC    &trans   &trans     &trans     &trans    &tdreset
 &kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET  &kp PLUS    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp TILDE  &kp EXCL    &kp AT     &kp HASH   &kp PIPE    &trans   &trans     &trans     &trans    &bootloader
+&kp TILDE  &kp EXCL    &kp AT     &kp HASH   &kp PIPE    &trans   &trans     &trans     &trans    &tdboot
                                   &kp UNDER  &kp RPAR    &trans   &trans
             >;
         };
