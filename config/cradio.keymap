@@ -169,10 +169,10 @@
 
         nav {
             bindings = <
-&tdreset  &trans    &trans     &trans     &trans           &trans     &kp LG(Z)  &kp LS(LG(Z))  &trans     &caps
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp BACKSPACE    &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT  &kp ESC
-&tdboot   &trans    &trans     &trans     &trans           &kp HOME   &kp PG_DN  &kp PG_UP      &kp END    &caps
-                               &none      &none            &kp SPACE  &kp ENTER
+&tdreset  &trans    &trans     &trans     &trans           &kp LG(LEFT_BRACKET)  &kp RG(RS(LEFT_BRACKET))  &kp RS(RG(RBKT))  &kp RG(RIGHT_BRACKET)  &caps
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp BACKSPACE    &kp LEFT              &kp DOWN                  &kp UP            &kp RIGHT              &kp ESC
+&tdboot   &trans    &trans     &trans     &trans           &kp HOME              &kp PG_DN                 &kp PG_UP         &kp END                &caps
+                               &none      &none            &kp SPACE             &kp ENTER
             >;
         };
 
