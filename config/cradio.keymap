@@ -96,13 +96,6 @@
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
         };
-
-        tdsqt: tap_dance_single_quote {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap dance single quote";
-            #binding-cells = <0>;
-            bindings = <&ht RGUI SQT>, <&kp COLON>;
-        };
     };
 
     combos {
@@ -142,7 +135,7 @@
         base {
             bindings = <
 &kp Q       &kp W       &kp E        &kp R         &kp T           &kp Y             &kp U         &kp I            &kp O          &kp P
-&ht LGUI A  &ht LALT S  &ht LCTRL D  &lht LSHFT F  &kp G           &kp H             &rht RSHFT J  &ht RCTRL K      &ht RALT L     &tdsqt
+&ht LGUI A  &ht LALT S  &ht LCTRL D  &lht LSHFT F  &kp G           &kp H             &rht RSHFT J  &ht RCTRL K      &ht RALT L     &ht RGUI SQT
 &kp Z       &kp X       &kp C        &kp V         &kp B           &kp N             &kp M         &mt MINUS COMMA  &mt UNDER DOT  &mt EXCL FSLH
                                      &lt 5 TAB     &rlt 4 SPACE    &rlt 1 BACKSPACE  &rlt 2 ENTER
             >;
