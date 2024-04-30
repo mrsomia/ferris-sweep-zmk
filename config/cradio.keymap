@@ -31,9 +31,9 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
@@ -111,10 +111,12 @@
             bindings = <&lt 3 DEL>;
             key-positions = <32 33>;
         };
+
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <1 2>;
         };
+
         combo_bspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
