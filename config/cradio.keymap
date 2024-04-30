@@ -22,7 +22,7 @@
 #define SETTINGS 6
 
 &mt {
-    tapping-term-ms = <170>;
+    tapping-term-ms = <200>;
     flavor = "tap-preferred";
 };
 
@@ -118,7 +118,7 @@
         };
 
         combo_bspc {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&mt RG(BSPC) BSPC>;
             key-positions = <7 8>;
         };
     };
