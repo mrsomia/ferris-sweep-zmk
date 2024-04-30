@@ -118,6 +118,14 @@
             bindings = <&lt 3 DEL>;
             key-positions = <32 33>;
         };
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>;
+        };
+        combo_bspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
     };
 
     //  conditional_layers {
