@@ -120,6 +120,7 @@
         combo_bspc {
             bindings = <&mt RG(BSPC) BSPC>;
             key-positions = <7 8>;
+            layers = <0 1 2>;
         };
     };
 
