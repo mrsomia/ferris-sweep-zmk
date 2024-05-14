@@ -162,7 +162,7 @@
 &kp Q         &kp W         &kp E          &kp R            &kp T         &kp Y         &kp U            &kp I            &kp O          &kp P
 &lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G         &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B         &kp N         &kp M            &mt MINUS COMMA  &mt UNDER DOT  &mt COLON FSLH
-                                           &lt 5 SPACE      &rlt 4 TAB    &rlt 1 ENTER  &rlt 2 BSPC
+                                           &lt 4 SPACE      &rlt 5 TAB    &rlt 2 ENTER  &rlt 1 BSPC
             >;
         };
 
