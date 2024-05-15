@@ -108,6 +108,13 @@
             bindings = <&none>, <&sys_reset>;
         };
 
+        tdance: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         rlt: repeat_layer_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "Repeat_layer_toggle";
