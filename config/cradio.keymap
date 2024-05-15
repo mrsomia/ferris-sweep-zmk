@@ -42,6 +42,20 @@
             hold-trigger-on-release;
         };
 
+        rhmr: rhmr {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+
+            label = "Right_hmr";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+        };
+
         // poistional holds for shift cmd and alt
 
         lshift: left_shift_mod {
@@ -103,20 +117,6 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
-        };
-
-        rhmr: rhmr {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-
-            label = "Right_hmr";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
         };
     };
 
