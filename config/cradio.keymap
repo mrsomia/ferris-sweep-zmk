@@ -133,11 +133,11 @@
         combo_esc_lt {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            bindings = <&lt 6 ESC>;
+            bindings = <&lt 5 ESC>;
         };
 
         combo_delete {
-            bindings = <&lt 3 DEL>;
+            bindings = <&lt 6 DEL>;
             key-positions = <32 33>;
         };
 
@@ -183,37 +183,28 @@
 
         base {
             bindings = <
-&kp Q         &kp W         &kp E          &kp R            &kp T         &kp Y         &kp U            &kp I            &kp O          &kp P
-&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G         &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
-&kp Z         &kp X         &kp C          &kp V            &kp B         &kp N         &kp M            &mt MINUS COMMA  &mt UNDER DOT  &mt COLON FSLH
-                                           &lt 4 SPACE      &sk LSHFT    &rlt 2 ENTER  &to 1
-            >;
-        };
-
-        num {
-            bindings = <
-&kp EXCL        &kp AT           &mt HASH RA(N3)   &kp DLLR          &mt PRCNT  &kp CARET    &kp AMPS  &kp STAR  &none          &kp BSPC
-&lhmr LGUI ESC  &lhmr LALT LPAR  &lhmr LCTRL RBRC  &lhmr LSHFT LBKT  &kp CARET  &kp DLLR  &rhmr RSHFT RBKT  &rhmr RCTRL RBRC  &rhmr RALT RPAR &rhmr RGUI SEMI
-&kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)     &kp PRCNT       &kp AMPS  &kp STAR  &mt PIPE BSLH     &kp LT            &kp RT          &to 3
-                                                      &to 0           &kp MINUS &trans    &to 2
+&kp Q         &kp W         &kp E          &kp R            &kp T        &kp Y         &kp U            &kp I            &kp O          &kp P
+&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G        &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
+&kp Z         &kp X         &kp C          &kp V            &kp B        &kp N         &kp M            &mt MINUS COMMA  &mt UNDER DOT  &mt COLON FSLH
+                                           &lt 3 SPACE      &sk LSHFT    &rlt 2 ENTER  &to 1
             >;
         };
 
         symbols {
             bindings = <
-&kp LBRC   &kp AMPS    &kp ASTRK  &kp LPAR  &kp RBRC     &kp MINUS &kp N7        &kp N8           &kp N9         &kp STAR
-&kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET &kp PLUS     &kp DOT  &rhmr RSHFT N4 &rhmr RCTRL N5   &rhmr RALT N6  &rhmr RGUI PLUS
-&to 4  &kp EXCL    &kp AT     &kp HASH  &kp PIPE     &kp N0   &kp N1          &kp N2          &kp N3         &kp FSLH
-                                  &to 0     &kp UNDER    &trans   &to 1
+&kp EXCL        &mt RA(N2) AT    &mt HASH RA(N3)   &mt RG(RS(NUMBER_4)) DLLR  &mt RS(RG(N5)) PRCNT    &kp CARET  &kp AMPS          &kp STAR          &trans           &kp BSPC
+&lhmr LGUI ESC  &lhmr LALT LPAR  &lhmr LCTRL RBRC  &lhmr LSHFT LBKT           &kp LT                  &kp GT     &rhmr RSHFT RBKT  &rhmr RCTRL RBRC  &rhmr RALT RPAR  &rhmr RGUI RET
+&to 4           &trans           &trans            &kp BSLH                   &trans                  &none      &kp SEMI          &kp PIPE          &trans           &to 3
+                                                   &to 0                      &kp MINUS               &trans     &to 2
             >;
         };
 
-        func {
+        num {
             bindings = <
-&kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &tdreset
-&kp F11  &kp F4  &kp F5  &kp F6  &none              &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp F10  &kp F1  &kp F2  &kp F3  &none              &trans  &trans     &trans     &trans    &tdboot
-                         &none   &none              &trans  &trans
+&kp TAB     &kp AMPS    &kp ASTRK  &kp LPAR   &kp RBRC     &kp MINUS  &kp N7          &kp N8          &kp N9         &kp STAR
+&kp ESCAPE  &kp DOLLAR  &kp PRCNT  &kp CARET  &kp PLUS     &kp DOT    &rhmr RSHFT N4  &rhmr RCTRL N5  &rhmr RALT N6  &rhmr RGUI PLUS
+&to 3       &kp EXCL    &kp AT     &kp HASH   &kp PIPE     &kp N0     &kp N1          &kp N2          &kp N3         &kp FSLH
+                                   &to 0      &kp UNDER    &trans     &to 1
             >;
         };
 
@@ -241,6 +232,15 @@
 &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp ESC
 &tdboot   &trans    &trans     &trans     &trans    &kp C_BRI_UP  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_BRI_DN  &caps
                                &none      &none     &trans        &trans
+            >;
+        };
+
+        func {
+            bindings = <
+&kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &tdreset
+&kp F11  &kp F4  &kp F5  &kp F6  &none              &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp F10  &kp F1  &kp F2  &kp F3  &none              &trans  &trans     &trans     &trans    &tdboot
+                         &none   &none              &trans  &trans
             >;
         };
     };
