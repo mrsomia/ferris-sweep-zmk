@@ -162,13 +162,11 @@
             bindings = <&kp TAB>;
             key-positions = <2 3>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
         };
 
         combo_bspc {
             bindings = <&mt RG(BSPC) BSPC>;
             key-positions = <7 8>;
-            layers = <0 1 2>;
             require-prior-idle-ms = <150>;
         };
 
@@ -176,7 +174,6 @@
             bindings = <&kp ESC>;
             key-positions = <1 2>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
         };
 
         combo_del {
