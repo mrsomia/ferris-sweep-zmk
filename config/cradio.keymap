@@ -230,9 +230,9 @@
 
         symbols {
             bindings = <
-&kp LBRC   &kp AMPS    &kp ASTRK  &kp LPAR               &kp RBRC     &trans   &trans     &trans     &trans    &tdreset
+&kp LBRC   &kp AMPS    &kp ASTRK  &mt RPAR LPAR          &kp RBRC     &trans   &trans     &trans     &trans    &tdreset
 &kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET              &kp PLUS     &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp TILDE  &kp EXCL    &kp AT     &kp HASH               &kp PIPE     &trans   &trans     &trans     &trans    &bootloader
+&kp TILDE  &kp EXCL    &kp AT     &mt HASH RA(N3)        &kp PIPE     &trans   &trans     &trans     &trans    &bootloader
                                   &kp RIGHT_PARENTHESIS  &kp UNDER    &trans   &trans
             >;
         };
