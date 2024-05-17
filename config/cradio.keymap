@@ -130,7 +130,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFTY";
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
+            bindings = <&skq LSHFT>, <&caps_word>;
         };
 
         shift_layer: shift_layer {
@@ -141,6 +141,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        skq: sticky_key_quick {
+            compatible = "zmk,behavior-sticky-key";
+            label = "sticky_key_quick";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            lazy;
+            release-after-ms = <1000>;
         };
     };
 
