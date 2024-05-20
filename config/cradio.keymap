@@ -196,6 +196,7 @@
         combo_ret {
             bindings = <&kp RET>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <150>;
         };
     };
 
