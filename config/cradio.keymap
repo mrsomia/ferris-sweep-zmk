@@ -133,6 +133,8 @@
             label = "SHIFTY";
             #binding-cells = <0>;
             bindings = <&skq LSHFT>, <&caps_word>;
+
+            tapping-term-ms = <320>;
         };
 
         skq: sticky_key_quick {
