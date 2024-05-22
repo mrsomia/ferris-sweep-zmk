@@ -135,16 +135,6 @@
             bindings = <&skq LSHFT>, <&caps_word>;
         };
 
-        shift_layer: shift_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LSHIFT";
-            bindings = <&lt>, <&shifty>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         skq: sticky_key_quick {
             compatible = "zmk,behavior-sticky-key";
             label = "sticky_key_quick";
@@ -154,6 +144,15 @@
             lazy;
             release-after-ms = <1000>;
         };
+
+        smrt_caps: smart_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_CAPS";
+            bindings = <&shifty>, <&kp CAPSLOCK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -162,7 +161,7 @@
         combo_esc_lt {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            bindings = <&lt 6 ESC>;
+            bindings = <&lt 5 ESC>;
         };
 
         combo_delete {
@@ -215,10 +214,10 @@
 
         base {
             bindings = <
-&kp Q         &kp W         &kp E          &kp R            &kp T               &kp Y         &kp U            &kp I            &kp O          &kp P
-&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G               &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
-&kp Z         &kp X         &kp C          &kp V            &kp B               &kp N         &kp M            &mt UNDER COMMA  &mt MINUS DOT  &mt COLON FSLH
-                                           &lt 4 SPACE      &shift_layer 5 0    &rlt 2 ENTER  &rlt 1 BSPC
+&kp Q         &kp W         &kp E          &kp R            &kp T         &kp Y         &kp U            &kp I            &kp O          &kp P
+&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G         &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
+&kp Z         &kp X         &kp C          &kp V            &kp B         &kp N         &kp M            &mt UNDER COMMA  &mt MINUS DOT  &mt COLON FSLH
+                                           &lt 4 SPACE      &smrt_caps    &rlt 2 ENTER  &rlt 1 BSPC
             >;
         };
 
@@ -264,15 +263,6 @@
 &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp BACKSPACE    &kp C_BRI_DEC  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC  &kp ESC
 &tdboot   &trans    &trans     &trans     &trans           &out OUT_TOG   &kp C_PREV    &kp C_PP      &kp C_NEXT     &caps
                                &none      &none            &kp ENTER      &kp SPACE
-            >;
-        };
-
-        settings {
-            bindings = <
-&tdreset  &trans    &trans     &trans     &trans    &trans        &trans        &trans        &trans        &trans
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp ESC
-&tdboot   &trans    &trans     &trans     &trans    &kp C_BRI_UP  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_BRI_DN  &caps
-                               &none      &none     &trans        &trans
             >;
         };
     };
