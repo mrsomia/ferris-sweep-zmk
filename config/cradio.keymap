@@ -225,19 +225,27 @@
 
         num {
             bindings = <
-&kp LBKT   &kp N7             &kp N8             &kp N9             &kp RBKT     &trans   &trans     &trans     &trans    &tdreset
-&kp SEMI   &mt RG(RS(N4)) N4  &mt RG(RS(N5)) N5  &kp N6             &kp EQUAL    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp GRAVE  &kp N1             &kp N2             &mt RG(RS(N3)) N3  &kp BSLH     &trans   &trans     &trans     &trans    &bootloader
-                                                 &kp N0             &kp MINUS    &trans   &trans
+&kp STAR   &kp N7             &kp N8             &kp N9             &kp PLUS     &trans   &trans     &trans     &trans    &tdreset
+&kp FSLH   &mt RG(RS(N4)) N4  &mt RG(RS(N5)) N5  &kp N6             &kp MINUS    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp N0     &kp N1             &kp N2             &mt RG(RS(N3)) N3  &kp EQUAL    &trans   &trans     &trans     &trans    &bootloader
+                                                 &kp DOT            &kp MINUS    &trans   &trans
             >;
         };
 
+//         symbols {
+//             bindings = <
+// &kp LBRC   &kp AMPS    &kp ASTRK  &mt RPAR LPAR          &kp RBRC     &trans   &trans     &trans     &trans    &tdreset
+// &kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET              &kp PLUS     &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+// &kp TILDE  &kp EXCL    &kp AT     &mt HASH RA(N3)        &kp PIPE     &trans   &trans     &trans     &trans    &bootloader
+//                                   &kp RIGHT_PARENTHESIS  &kp UNDER    &trans   &trans
+//             >;
+//         };
         symbols {
             bindings = <
-&kp LBRC   &kp AMPS    &kp ASTRK  &mt RPAR LPAR          &kp RBRC     &trans   &trans     &trans     &trans    &tdreset
-&kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET              &kp PLUS     &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp TILDE  &kp EXCL    &kp AT     &mt HASH RA(N3)        &kp PIPE     &trans   &trans     &trans     &trans    &bootloader
-                                  &kp RIGHT_PARENTHESIS  &kp UNDER    &trans   &trans
+&kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)  &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS          &kp STAR          &kp MINUS       &kp EQUALS
+&lhmr LGUI COLON  &lhmr LALT LPAR &lhmr LCTRL LBKT &lhmr LSHFT LBRC &kp LT      &kp GT    &rhmr RSHFT RBRC  &rhmr RCTRL RBKT  &rhmr RALT RPAR &rhmr RGUI SEMI
+&kp TILDE         &kp GRAVE       &kp BSLH         &kp PIPE         &kp QMARK   &trans    &kp UNDER         &kp COMMA         &kp DOT         &kp COLON
+                                                   &to 0            &smrt_caps  &trans    &to 1
             >;
         };
 
