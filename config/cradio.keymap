@@ -228,7 +228,7 @@
 &kp STAR   &kp N7             &kp N8             &kp N9             &kp PLUS     &trans   &trans     &trans     &trans    &tdreset
 &kp FSLH   &mt RG(RS(N4)) N4  &mt RG(RS(N5)) N5  &kp N6             &kp MINUS    &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
 &kp N0     &kp N1             &kp N2             &mt RG(RS(N3)) N3  &kp EQUAL    &trans   &trans     &trans     &trans    &bootloader
-                                                 &kp DOT            &kp MINUS    &trans   &trans
+                                                 &to 0              &kp DOT      &trans   &trans
             >;
         };
 
@@ -242,7 +242,7 @@
 //         };
         symbols {
             bindings = <
-&kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)  &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS          &kp STAR          &kp MINUS       &kp EQUALS
+&kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)  &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS          &kp STAR          &kp MINUS       &kp EQUAL
 &lhmr LGUI COLON  &lhmr LALT LPAR &lhmr LCTRL LBKT &lhmr LSHFT LBRC &kp LT      &kp GT    &rhmr RSHFT RBRC  &rhmr RCTRL RBKT  &rhmr RALT RPAR &rhmr RGUI SEMI
 &kp TILDE         &kp GRAVE       &kp BSLH         &kp PIPE         &kp QMARK   &trans    &kp UNDER         &kp COMMA         &kp DOT         &kp COLON
                                                    &to 0            &smrt_caps  &trans    &to 1
