@@ -153,6 +153,12 @@
           require-prior-idle-ms = <150>;
         };
 
+        combo_repeat {
+            bindings = <&key_repeat>;
+            key-positions = <1 2 3>;
+            require-prior-idle-ms = <150>;
+          }
+
         combo_bspc {
             bindings = <&kp BSPC>;
             key-positions = <6 7>;
