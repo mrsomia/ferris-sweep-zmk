@@ -58,36 +58,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
         };
 
-        // poistional holds for shift cmd and alt
-
-        lshift: left_shift_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33 30 31>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-on-release;
-        };
-
-        // poistional holds for shift cmd and alt
-
-        rshift: right_shift_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-on-release;
-        };
-
         caps: shift_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -217,7 +187,7 @@
         base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R            &kp T         &kp Y         &kp U            &kp I            &kp O          &kp P
-&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lshift LSHFT F  &kp G         &kp H         &rshift RSHFT J  &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
+&lhmr LGUI A  &lhmr LALT S  &lhmr LCTRL D  &lhmr LSHFT F    &kp G         &kp H         &rhmr RSHFT J   &rhmr RCTRL K    &rhmr RALT L   &rhmr RGUI SQT
 &kp Z         &kp X         &kp C          &kp V            &kp B         &kp N         &kp M            &mt UNDER COMMA  &mt MINUS DOT  &mt COLON FSLH
                                            &lt 4 SPACE      &smrt_caps    &rlt 2 ENTER  &rlt 1 BSPC
             >;
