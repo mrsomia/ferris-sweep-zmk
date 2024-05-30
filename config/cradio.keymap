@@ -173,14 +173,6 @@
         };
     };
 
-    //  conditional_layers {
-    //      compatible = "zmk,conditional-layers";
-    //      tri_layer {
-    //          if-layers = <1 2>;
-    //          then-layer = <3>;
-    //      };
-    //  };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -202,14 +194,6 @@
             >;
         };
 
-//         symbols {
-//             bindings = <
-// &kp LBRC   &kp AMPS    &kp ASTRK  &mt RPAR LPAR          &kp RBRC     &trans   &trans     &trans     &trans    &tdreset
-// &kp COLON  &kp DOLLAR  &kp PRCNT  &kp CARET              &kp PLUS     &kp DOT  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-// &kp TILDE  &kp EXCL    &kp AT     &mt HASH RA(N3)        &kp PIPE     &trans   &trans     &trans     &trans    &bootloader
-//                                   &kp RIGHT_PARENTHESIS  &kp UNDER    &trans   &trans
-//             >;
-//         };
         symbols {
             bindings = <
 &kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)  &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS          &kp STAR          &kp MINUS       &kp EQUAL
