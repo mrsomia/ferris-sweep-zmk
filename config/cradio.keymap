@@ -36,7 +36,7 @@
             flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <160>;
             bindings = <&kp>, <&kp>;
 
             label = "LEFT_HMR";
@@ -50,7 +50,7 @@
             flavor = "balanced";
             tapping-term-ms = <220>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <160>;
             bindings = <&kp>, <&kp>;
 
             label = "Right_hmr";
@@ -239,10 +239,10 @@
 
         symbols {
             bindings = <
-&kp EXCL          &mt RA(N2) AT   &mt HASH RA(N3)  &kp DLLR         &kp PRCNT   &kp CARET &kp AMPS          &kp STAR          &kp MINUS       &kp EQUAL
-&lhmr LGUI COLON  &lhmr LALT LBRC &lhmr LCTRL LBKT &lhmr LSHFT LPAR &kp LT      &kp GT    &rhmr RSHFT RPAR  &rhmr RCTRL RBKT  &rhmr RALT RBRC &rhmr RGUI SEMI
-&kp TILDE         &kp GRAVE       &kp BSLH         &kp PIPE         &kp QMARK   &kp EQUAL &kp UNDER         &kp COMMA         &kp DOT         &kp COLON
-                                                   &to 0            &smrt_caps  &trans    &to 1
+&kp EXCL          &mt RA(N2) AT    &mt HASH RA(N3)   &kp DLLR          &kp PRCNT     &kp CARET  &kp AMPS          &kp STAR          &kp MINUS        &kp EQUAL
+&lhmr LGUI COLON  &lhmr LALT LBRC  &lhmr LCTRL LBKT  &lhmr LSHFT LPAR  &kp LT        &kp GT     &rhmr RSHFT RPAR  &rhmr RCTRL RBKT  &rhmr RALT RBRC  &rhmr RGUI SEMI
+&kp TILDE         &kp GRAVE        &kp BSLH          &kp PIPE          &kp QMARK     &kp EQUAL  &kp UNDER         &kp COMMA         &kp DOT          &kp COLON
+                                                     &to 0             &smrt_caps    &trans     &to 1
             >;
         };
 
